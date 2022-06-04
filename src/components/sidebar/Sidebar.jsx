@@ -12,7 +12,7 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Button } from "@mui/material";
 import "./Sidebar.css";
 
-function Sidebar() {
+const Sidebar = () => {
     return (
         <div className="sidebar">
         {/* TwitterIcon */}
