@@ -1,10 +1,10 @@
 import { Search } from "@mui/icons-material";
 import React from "react";
-// import {
-//     TwitterTimelineEmbed,
-//     TwitterShareButton,
-//     TwitterTweetEmbed,
-// } from "react-twitter-embed";
+import {
+    TwitterTimelineEmbed,
+    TwitterShareButton,
+    TwitterTweetEmbed,
+} from "react-twitter-embed";
 import "./Widgets.css";
 
 const Widgets = () => {
@@ -19,17 +19,18 @@ const Widgets = () => {
                 <h2>いまどうしてる？</h2>
 
                 {/* ライブラリを追加・追記 */}
-                {/* <TwitterTweetEmbed tweetId={"1475764828208009220"} />
+                {/* <TwitterTweetEmbed tweetId={"1475764828208009220"} /> */}
+                <TwitterTweetEmbed tweetId={"1529119366637559808"} />
 
                 <TwitterTimelineEmbed
                 sourceType="profile"
-                screenName="Shin_Engineer"
+                screenName="LaplusDarknesss"
                 options={{ height: 400 }}
                 />
                 <TwitterShareButton
-                url={"https://twitter.com/Shin_Engineer"}
-                options={{ text: "#React.js勉強中", via: "Shin_Engineer" }}
-                /> */}
+                url={"https://twitter.com/LaplusDarknesss"}
+                options={{ text: "#laplus_great", via: "LaplusDarknesss" }}
+                />
             </div>
         </div>
     )
