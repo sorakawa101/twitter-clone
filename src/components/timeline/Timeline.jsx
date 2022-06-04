@@ -9,7 +9,7 @@ const Timeline = () => {
         <div className="timeline">
             {/* Header */}
             <div className="timeline_header">
-                <h2>ホーム</h2>
+                <h2>Home</h2>
             </div>
 
             {/* TweetBox */}

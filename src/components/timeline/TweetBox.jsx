@@ -10,7 +10,7 @@ const TweetBox = () => {
                 <div className="tweetBox_input">
                 <Avatar />
                 <input
-                    placeholder="いまどうしてる？"
+                    placeholder="What's happening?"
                     type="text"
                 ></input>
                 </div>
@@ -24,7 +24,7 @@ const TweetBox = () => {
                 className="tweetBox_tweetButton"
                 type="submit"
                 >
-                ツイートする
+                Tweet
                 </Button>
             </form>
         </div>
