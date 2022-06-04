@@ -16,7 +16,7 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
         {/* TwitterIcon */}
-        <TwitterIcon className="sidebar--twitterIcon" />
+        <TwitterIcon className="sidebar_twitterIcon" />
 
         {/* SidebarOption */}
         <SidebarOption text="ホーム" Icon={HomeIcon} active />
@@ -29,7 +29,7 @@ const Sidebar = () => {
         <SidebarOption text="もっとみる" Icon={MoreHorizIcon} />
 
         {/* TweetButton */}
-        <Button variant="outlined" className="sidebar--tweet" fullWidth>
+        <Button variant="outlined" className="sidebar_tweet" fullWidth>
             ツイートする
         </Button>
         </div>

@@ -7,14 +7,14 @@
     padding-right: 20px;
     }
 
-.sidebar--twitterIcon {
+.sidebar_twitterIcon {
     color: var(--twitter-color);
     font-size: 30px !important;
     margin-left: 20px;
     margin-bottom: 20px;
 }
 
-.sidebar--tweet {
+.sidebar_tweet {
     background-color: var(--twitter-color) !important;
     color: white !important;
     font-weight: 900 !important;
