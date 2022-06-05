@@ -16,10 +16,14 @@ const Timeline = () => {
             <TweetBox />
 
             {/* Post */}
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            <Post
+                displayName="Shunay Sasakawa"
+                username="sorakawa101"
+                verified={true}
+                text="First Tweet"
+                avatar="https://source.unsplash.com/random"
+                image="https://source.unsplash.com/random"
+            />
         </div>
     )
 }
