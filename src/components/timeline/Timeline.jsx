@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { collection, doc, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, orderBy, onSnapshot } from "firebase/firestore";
 
 import "./Timeline.css";
 import TweetBox from "./TweetBox";
 import Post from "./Post";
-import db from '../../firebase.js';
+import db from '../../firebase';
 
 const Timeline = () => {
 
@@ -12,8 +12,14 @@ const Timeline = () => {
 
     useEffect(() => {
         const postData = collection(db, "posts");
-        getDocs(postData).then((querySnapshot) => {
-            setPosts(querySnapshot.docs.map((doc) => doc.data()))
+        const q = query(postData, orderBy("timestamp", "desc")); // データの並び替え
+        // getDocs(q).then((querySnapshot) => {
+        //     setPosts(querySnapshot.docs.map((doc) => doc.data()))
+        // });
+
+        // リアルタイムでデータを取得
+        onSnapshot(q, (querySnapshot) => {
+            setPosts(querySnapshot.docs.map((doc) => doc.data()));
         });
     }, []);
 
