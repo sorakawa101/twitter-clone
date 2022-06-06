@@ -1,7 +1,5 @@
-import React from 'react'
-import { collection, getDocs } from "firebase/firestore";
-// import { collection, getDocs } from "https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js";
-
+import React, { useEffect, useState } from 'react'
+import { collection, doc, getDocs } from "firebase/firestore";
 
 import "./Timeline.css";
 import TweetBox from "./TweetBox";
@@ -9,10 +7,15 @@ import Post from "./Post";
 import db from '../../firebase.js';
 
 const Timeline = () => {
-    const postData = collection(db, "posts");
-    getDocs(postData).then((querySnapshot) => {
-        console.log(querySnapshot);
-    });
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        const postData = collection(db, "posts");
+        getDocs(postData).then((querySnapshot) => {
+            setPosts(querySnapshot.docs.map((doc) => doc.data()))
+        });
+    }, []);
 
     return (
         <div className="timeline">
@@ -25,14 +28,17 @@ const Timeline = () => {
             <TweetBox />
 
             {/* Post */}
-            <Post
-                displayName="Shunay Sasakawa"
-                username="sorakawa101"
-                verified={true}
-                text="First Tweet"
-                avatar="https://source.unsplash.com/random"
-                image="https://source.unsplash.com/random"
+            {posts.map((post) => (
+                <Post
+                key={post.text}
+                displayName={post.dixplayName}
+                username={post.username}
+                verified={post.verified}
+                text={post.text}
+                avatar={post.avatar}
+                image={post.image}
             />
+            ))}
         </div>
     )
 }
