@@ -12,6 +12,7 @@ const Timeline = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
+
         const postData = collection(db, "posts");
         const q = query(postData, orderBy("timestamp", "desc")); // データの並び替え
         // getDocs(q).then((querySnapshot) => {
@@ -38,7 +39,7 @@ const Timeline = () => {
             <FlipMove>
             {posts.map((post) => (
                 <Post
-                key={post.text}
+                key={post.key}
                 displayName={post.displayName}
                 username={post.username}
                 verified={post.verified}

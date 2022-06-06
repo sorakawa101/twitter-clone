@@ -1,6 +1,7 @@
 import { Avatar, Button } from "@mui/material";
 import React, { useState } from "react";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { v4 as uuid } from 'uuid';
 
 import "./TweetBox.css";
 import db from '../../firebase';
@@ -12,8 +13,10 @@ const TweetBox = () => {
     const sendTweet = (e) => {
         // firebaseのdbにデータを追加する
         e.preventDefault();
+        const id = uuid();
 
         addDoc(collection(db, "posts"), {
+                key: `tweet-${id}`,
                 displayName: "Sassa",
                 username: "sorakawa101",
                 verified: "true",
