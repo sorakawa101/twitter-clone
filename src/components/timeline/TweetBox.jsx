@@ -14,11 +14,11 @@ const TweetBox = () => {
         e.preventDefault();
 
         addDoc(collection(db, "posts"), {
-                displayName: "sassa",
-                username: "skyriver101",
+                displayName: "Sassa",
+                username: "sorakawa101",
                 verified: "true",
                 text: tweetMessage,
-                avatar: "https://source.unsplash.com/random",
+                avatar: "https://source.unsplash.com/photos/92PmjawKUfs",
                 image:tweetImage,
                 timestamp: serverTimestamp(),
         });

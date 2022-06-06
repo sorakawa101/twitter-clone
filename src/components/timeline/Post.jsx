@@ -7,12 +7,13 @@ import {
 } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
 import React, { forwardRef } from "react";
+
 import "./Post.css";
 
-const Post = (props) => {
+const Post = forwardRef((props, ref) => {
     const { displayName, username, verified, text, avatar, image } = props;
     return (
-        <div className="post">
+        <div className="post" ref={ref}>
             <div className="post_avatar">
                 <Avatar src={avatar} />
             </div>
@@ -43,6 +44,6 @@ const Post = (props) => {
             </div>
         </div>
     )
-}
+});
 
 export default Post

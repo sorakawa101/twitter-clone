@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { collection, getDocs, query, orderBy, onSnapshot } from "firebase/firestore";
+import FlipMove from 'react-flip-move';
 
 import "./Timeline.css";
 import TweetBox from "./TweetBox";
@@ -34,10 +35,11 @@ const Timeline = () => {
             <TweetBox />
 
             {/* Post */}
+            <FlipMove>
             {posts.map((post) => (
                 <Post
                 key={post.text}
-                displayName={post.dixplayName}
+                displayName={post.displayName}
                 username={post.username}
                 verified={post.verified}
                 text={post.text}
@@ -45,6 +47,7 @@ const Timeline = () => {
                 image={post.image}
             />
             ))}
+            </FlipMove>
         </div>
     )
 }

@@ -31,7 +31,7 @@ const Widgets = () => {
                 // url={"https://twitter.com/LaplusDarknesss"}
                 // options={{ text: "#laplus_great", via: "LaplusDarknesss" }}
                 url={"https://twitter.com/Shin_Engineer"}
-                options={{ text: "#laplus_great", via: "Shin_Engineer" }}
+                options={{ text: "Hello World!", via: "Shin_Engineer" }}
                 />
             </div>
         </div>
