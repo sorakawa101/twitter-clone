@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { collection, getDocs, query, orderBy, onSnapshot } from "firebase/firestore";
+// import { collection, getDocs, query, orderBy, onSnapshot } from "firebase/firestore";
+import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import FlipMove from 'react-flip-move';
 
 import "./Timeline.css";
