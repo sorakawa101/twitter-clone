@@ -11,7 +11,7 @@ import React, { forwardRef } from "react";
 import "./Post.css";
 
 const Post = forwardRef((props, ref) => {
-    const { displayName, username, text, avatar, image } = props;
+    const { displayName, username, verified, text, avatar, image } = props;
     return (
         <div className="post" ref={ref}>
             <div className="post_avatar">

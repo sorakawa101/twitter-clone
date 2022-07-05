@@ -19,20 +19,20 @@ const Widgets = () => {
                 <h2>What's happening</h2>
 
                 {/* ライブラリを追加・追記 */}
-                <TwitterTweetEmbed tweetId={"1456428607866216452"} />
+                <TwitterTweetEmbed tweetId={"1475764828208009220"} />
                 {/* <TwitterTweetEmbed tweetId={"1529119366637559808"} /> */}
 
                 <TwitterTimelineEmbed
                 sourceType="profile"
-                screenName="gigazine"
+                screenName="Shin_Engineer"
                 options={{ height: 400 }}
                 />
-                {/* <TwitterShareButton
+                <TwitterShareButton
                 // url={"https://twitter.com/LaplusDarknesss"}
                 // options={{ text: "#laplus_great", via: "LaplusDarknesss" }}
                 url={"https://twitter.com/Shin_Engineer"}
                 options={{ text: "Hello World!", via: "Shin_Engineer" }}
-                /> */}
+                />
             </div>
         </div>
     )
